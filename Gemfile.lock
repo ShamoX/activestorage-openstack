@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    activestorage-openstack (0.6.2)
+    activestorage-openstack (0.6.3)
       fog-openstack (~> 1.0)
       mime-types
 
