@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     activestorage-openstack (0.6.2)
-      fog-openstack
+      fog-openstack (~> 1.0)
       mime-types
 
 GEM
@@ -63,7 +63,7 @@ GEM
     fog-json (1.2.0)
       fog-core
       multi_json (~> 1.10)
-    fog-openstack (1.0.6)
+    fog-openstack (1.0.8)
       fog-core (~> 2.1)
       fog-json (>= 1.0)
       ipaddress (>= 0.8)

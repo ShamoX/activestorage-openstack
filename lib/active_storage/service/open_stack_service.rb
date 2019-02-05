@@ -12,7 +12,7 @@ module ActiveStorage
           credentials
         end
 
-      @client = Fog::Storage::OpenStack.new(settings)
+      @client = Fog::OpenStack::Storage.new(settings)
       @container = Fog::OpenStack.escape(container)
     end
 
@@ -49,7 +49,7 @@ module ActiveStorage
       instrument :delete, key: key do
         begin
           client.delete_object(container, key)
-        rescue Fog::Storage::OpenStack::NotFound
+        rescue Fog::OpenStack::Storage::NotFound
           false
         end
       end
@@ -70,7 +70,7 @@ module ActiveStorage
         begin
           answer = object_for(key)
           payload[:exist] = answer
-        rescue Fog::Storage::OpenStack::NotFound
+        rescue Fog::OpenStack::Storage::NotFound
           payload[:exist] = false
         end
       end
