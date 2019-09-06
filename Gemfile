@@ -10,5 +10,9 @@ gemspec
 # Git. Remember to move these dependencies to your gemspec before releasing
 # your gem to rubygems.org.
 
+group :development, :test do
+  gem "sqlite3"
+  gem "rails", "~> 5.2.0"
+end
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
