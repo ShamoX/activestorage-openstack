@@ -2,9 +2,9 @@
 This rails plugin wraps the OpenStack Swift provider as an Active Storage service.
 
 [![Gem Version](https://badge.fury.io/rb/activestorage-openstack.svg)](https://badge.fury.io/rb/activestorage-openstack)
-[![Build Status](https://travis-ci.com/chaadow/activestorage-openstack.svg?branch=master)](https://travis-ci.com/chaadow/activestorage-openstack)
-[![Maintainability](https://api.codeclimate.com/v1/badges/4c070c101f86a579516f/maintainability)](https://codeclimate.com/github/chaadow/activestorage-openstack/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/4c070c101f86a579516f/test_coverage)](https://codeclimate.com/github/chaadow/activestorage-openstack/test_coverage)
+[![Build Status](https://travis-ci.com/ShamoX/activestorage-openstack.svg?branch=master)](https://travis-ci.com/ShamoX/activestorage-openstack)
+[![Maintainability](https://api.codeclimate.com/v1/badges/4c070c101f86a579516f/maintainability)](https://codeclimate.com/github/ShamoX/activestorage-openstack/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/4c070c101f86a579516f/test_coverage)](https://codeclimate.com/github/ShamoX/activestorage-openstack/test_coverage)
 
 
 # PLEASE USE VERSION 0.4.1 OF THE GEM
@@ -108,7 +108,7 @@ $ bin/test
 ```
 
 ## Contributions
-Contributions are welcome. Feel free to open any issues if you encounter any bug, or if you want to suggest a feature by clicking here: https://github.com/chaadow/activestorage-openstack/issues
+Contributions are welcome. Feel free to open any issues if you encounter any bug, or if you want to suggest a feature by clicking here: https://github.com/ShamoX/activestorage-openstack/issues
 
 ## License
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
