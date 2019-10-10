@@ -1,9 +1,9 @@
 language: ruby
 cache: bundler
 rvm:
-  - 2.4
-  - 2.5
-  - 2.6
+- 2.4
+- 2.5
+- 2.6
 before_script:
 - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64
   > ./cc-test-reporter
@@ -15,3 +15,11 @@ script:
 - bin/test
 after_script:
 - "./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT"
+deploy:
+  provider: rubygems
+  api_key:
+    secure: BE3ySp4lxFojQvLV/kG/TgdF8d8pZ3+4LWlg+Jj07jnI0gvwkLON4KYWFwQ86n69j+XL9lWC40bDvA5c83CLxr3VTpfanwPgWWZaFTwldibheR311l1FIStKAcUuueIUq9s5KxnzYBpvnon9+7Jqy44WrC8gyAwlifQKj3t2fCq3FmAoz2dIp0xWB18qQJiVAMtAMHR+BYgJTM73bZYgV5DhBh9buumIsp0e8534/Urq7lj7NCBd6ZcFeZ8RRI+uzzvuEWri73yjcqx2bH/UFc2hvGclW17m40fEqBq/M67J6+ZkhnMK/ei/wE0pHmpPYEZjbxe2MNCDnT25ofAfEZGiK5plszRRCQ3j3I8YWKk/sF5Ku45Gyut4Ma15Os0/XdzSL6vD64UKiQ3f8EX2zkmhFJYPZuenG92mXoYhS2YDHJWVEREqTwh2JH27+oZ914OEjY+ENYjBueaz1cZklPVHXCTFnqOTBBJu7sANGzuVfZ63G5S9PGzqEdvZf275+Gct0aMe8tDeceNZF8gU+Bp2+z5K9122g/YFdzXikGiGw0lSY8h8wXwv72ahs23m5she03my4UGTeM9lirTlgUDdHO41BNdfOEYpi+mCdUe+yEcwxp/b+KALvWAk/RbFXAFxh2KkDAWM5DxoaEpJ2zolNISB5Ph/xVprsmxYbCA=
+  gem: activestorage-openstack-shamox
+  on:
+    tags: true
+    repo: ShamoX/activestorage-openstack
