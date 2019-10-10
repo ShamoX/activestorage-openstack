@@ -82,9 +82,29 @@ It is a good practice to create a separate container for each of your environmen
 Once safely saved, you can add them to your storage configuration in your Rails application.
 ## `temp_url_key` configuration
 
-the `openstack_temp_url_key` in your configuration is mandatory for generating URLs (expiring ones) as well as for Direct Upload. You can set it up with `Swift` or with the `Fog/OpenStack` gem. More instructions on how to set it up with Swift are found [HERE](https://docs.openstack.org/swift/latest/api/temporary_url_middleware.html#secret-keys)
+the `openstack_temp_url_key` in your configuration is mandatory for generating URLs (expiring ones) as well as for Direct Upload. You can set it up with `Swift` or with the `Fog/OpenStack` gem. More instructions on how to set it up with Swift are found [HERE](https://docs.openstack.org/swift/latest/api/temporary_url_middleware.html#secret-keys).
 
-The next version of this plugin, will add a rails generator, or expose a method that would use the built-in method from `Fog::OpenStack::Real` to generate the key.
+To create it and post it you can use `bin/create_and_post_tempurl_key.sh` after having set your environment.
+To set your environment set :
+```shell
+export OS_AUTH_URL "https://auth.cloud.ovh.net"
+export OS_IDENTITY_API_VERSION "3"
+
+export OS_PROJECT_ID="your project id"
+
+# In addition to the owning entity (tenant), openstack stores the entity
+# performing the action as the **user**.
+export OS_USERNAME="your username"
+
+# With Keystone you pass the keystone password.
+export OS_PASSWORD="your secret passwor"
+
+# If your configuration has multiple regions, we set that information here.
+# OS_REGION_NAME is optional and only valid in certain environments.
+export OS_REGION_NAME="BHS1"
+```
+
+To setup travis tests, you need to set `OPENSTACK_TEMP_URL_KEY`.
 
 ## `ActiveStorage::Openstack`'s Content-Type handling
 

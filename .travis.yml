@@ -12,6 +12,7 @@ before_script:
   > ./cc-test-reporter
 - chmod +x ./cc-test-reporter
 - "./cc-test-reporter before-build"
+- ./bin/openrc.sh
 - cp test/configurations.example.yml test/configurations.yml
 script:
 - bin/test

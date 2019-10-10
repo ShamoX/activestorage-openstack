@@ -10,5 +10,11 @@ gemspec
 # Git. Remember to move these dependencies to your gemspec before releasing
 # your gem to rubygems.org.
 
-# To use a debugger
-# gem 'byebug', group: [:development, :test]
+# Just for bundle to manage groups
+gem 'fog-openstack'
+gem 'mime-types'
+
+group :development, :test do
+  gem 'byebug'
+  gem 'pry'
+end
