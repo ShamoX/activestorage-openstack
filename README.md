@@ -3,18 +3,23 @@ This rails plugin wraps the OpenStack Swift provider as an Active Storage servic
 
 [![Gem Version](https://badge.fury.io/rb/activestorage-openstack.svg)](https://badge.fury.io/rb/activestorage-openstack)
 [![Build Status](https://travis-ci.com/ShamoX/activestorage-openstack.svg?branch=master)](https://travis-ci.com/ShamoX/activestorage-openstack)
-[![Maintainability](https://api.codeclimate.com/v1/badges/4c070c101f86a579516f/maintainability)](https://codeclimate.com/github/ShamoX/activestorage-openstack/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/4c070c101f86a579516f/test_coverage)](https://codeclimate.com/github/ShamoX/activestorage-openstack/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/567a1c8e09288db91781/maintainability)](https://codeclimate.com/github/ShamoX/activestorage-openstack/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/567a1c8e09288db91781/test_coverage)](https://codeclimate.com/github/ShamoX/activestorage-openstack/test_coverage)
 
 
-# PLEASE USE VERSION 0.4.1 OF THE GEM
-Starting from version `0.4`, this gem enforces version `0.2.2` of `fog-openstack` which introduces breaking changes to the configuration keys in `config/storage.yml`. Please read the [MIGRATING from `0.1.x` to `0.2.x`](#migrating-from-fog-openstack-01x-to-02x) section
+# PLEASE FORGIVE ME
+Few monthes ago, I tried to contact `chaadow` - which seems to be the new maintainer
+of this project - and got no answer. Since I needed updates on this gem and no ones
+seemed to take it back, I decided to create and setup this new version.
+
+For now I call it `activestorage-openstack-shamox`, just because I can't take over
+`activestorage-openstack` from rubygem without a consent of its owner.
 
 ## Installation
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'activestorage-openstack', '0.4.1'
+gem 'activestorage-openstack-shamox'
 ```
 
 And then execute:
@@ -24,7 +29,7 @@ $ bundle
 
 Or install it yourself as:
 ```bash
-$ gem install activestorage-openstack
+$ gem install activestorage-openstack-shamox
 ```
 
 ## Usage
@@ -37,6 +42,7 @@ dev_openstack:
     openstack_auth_url: <auth url>
     openstack_username: <username>
     openstack_api_key: <password>
+    openstack_project_id: <region>
     openstack_region: <region>
     openstack_temp_url_key: <temp url key> # Mandatory, instructions below
   connection_options: # optional
@@ -114,21 +120,42 @@ For these edge cases `ActiveStorage::Blob::Identifiable` downloads the first 4K 
 
 ## Testing
 First, run `bundle` to install the gem dependencies (both development and production)
-```bash
+```shell
 $ bundle
 ```
 Then, from the root of the plugin, copy the following file and fill in the appropriate credentials.
 **Preferably, set up a container for your testing, separate from production.**
-```bash
+```shell
 $ cp test/configurations.example.yml test/configurations.yml
+$ source ./bin/openrc.sh
 ```
 And then run the tests:
-```bash
+```shell
 $ bin/test
 ```
 
 ## Contributions
 Contributions are welcome. Feel free to open any issues if you encounter any bug, or if you want to suggest a feature by clicking here: https://github.com/ShamoX/activestorage-openstack/issues
+
+I use the git flow scheme then, when wanting to merge, please target the `develop`
+branch and not the `master`. I would recommand you to use `git flow` also, and
+use the following configuration (which is the default):
+```
+$ git flow init
+Which branch should be used for bringing forth production releases?
+   - master
+Branch name for production releases: [master]
+Branch name for "next release" development: [develop]
+
+How to name your supporting branch prefixes?
+Feature branches? [feature/]
+Bugfix branches? [bugfix/]
+Release branches? [release/]
+Hotfix branches? [hotfix/]
+Support branches? [support/]
+Version tag prefix? []
+Hooks and filters directory? [/home/rlaures/dev/activestorage-openstack/.git/hooks]
+```
 
 ## License
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
