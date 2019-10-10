@@ -12,3 +12,4 @@ test/dummy/tmp/
 test/configurations.yml
 Gemfile.lock
 coverage
+vendor/bundle
