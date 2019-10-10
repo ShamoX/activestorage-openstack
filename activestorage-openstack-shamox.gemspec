@@ -6,12 +6,12 @@ require "active_storage/openstack/version"
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
-  s.name        = "activestorage-openstack"
+  s.name        = "activestorage-openstack-shamox"
   s.version     = ActiveStorage::Openstack::VERSION
-  s.author     = ["Chedli Bourguiba"]
-  s.email       = ["bourguiba.chedli@gmail.com"]
-  s.homepage    = "https://github.com/chaadow/activestorage-openstack"
-  s.summary     = "ActiveStorage wrapper for OpenStack Storage"
+  s.author     = ["Chedli Bourguiba", "Roland Laurès"]
+  s.email       = ["bourguiba.chedli@gmail.com", "roland@rlaures.pro"]
+  s.homepage    = "https://github.com/shamox/activestorage-openstack"
+  s.summary     = "ActiveStorage wrapper for OpenStack Storage (ShamoX version)"
   s.description = "Wraps the OpenStack Swift/Storage service as an Active Storage service"
   s.license     = "MIT"
 
