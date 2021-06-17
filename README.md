@@ -1,7 +1,7 @@
 # ActiveStorage::Openstack
 This rails plugin wraps the OpenStack Swift provider as an Active Storage service. It is now compatible with rails 6.
 
-[![Gem Version](https://badge.fury.io/rb/activestorage-openstack.svg)](https://badge.fury.io/rb/activestorage-openstack)
+[![Gem Version](https://badge.fury.io/rb/activestorage-openstack-shamox.svg)](https://badge.fury.io/rb/activestorage-openstack-shamox)
 [![Build Status](https://travis-ci.com/ShamoX/activestorage-openstack.svg?branch=master)](https://travis-ci.com/ShamoX/activestorage-openstack)
 [![Maintainability](https://api.codeclimate.com/v1/badges/567a1c8e09288db91781/maintainability)](https://codeclimate.com/github/ShamoX/activestorage-openstack/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/567a1c8e09288db91781/test_coverage)](https://codeclimate.com/github/ShamoX/activestorage-openstack/test_coverage)
