@@ -1,5 +1,5 @@
 module ActiveStorage
   module Openstack
-    VERSION = '0.7.0'
+    VERSION = '1.5.1'
   end
 end
